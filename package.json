@@ -17,7 +17,7 @@
   "homepage": "https://github.com/mariusandra/pigeon-maps#readme",
   "scripts": {
     "start": "webpack-dev-server --history-api-fallback --hot --host 0.0.0.0 --port 4040",
-    "build": "rimraf lib && rollup -c && rimraf lib/demo && move lib/src/* lib/ && rimraf lib/src",
+    "build": "rimraf lib && rollup -c && rimraf lib/demo && mv lib/src/* lib/ && rimraf lib/src",
     "prepublishOnly": "yarn build",
     "prepare": "npm run build",
     "prettier": "prettier --write \"src/**/*.tsx\" \"demo/**/*.tsx\" ",
@@ -77,6 +77,7 @@
     "file-loader": "^6.0.0",
     "husky": "^4",
     "lint-staged": ">=10.5.1",
+    "mv": "^2.1.1",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
